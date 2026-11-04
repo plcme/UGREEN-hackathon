@@ -20,7 +20,7 @@
 | 能力依据章节，格式严格 | CAPABILITY_EVIDENCE_* | 标题必须是 `# Generation-time capability evidence`，每行 ``- `ug-document` → `document-agent` ``（**用 → 箭头，两边反引号**），每个 CLI 只写一次 |
 | 每个 delegate target 都要有对应的能力依据 | DELEGATE_TARGET_EVIDENCE_MISSING | |
 | delegate 格式 | DELEGATE_FORMAT_INVALID | 单行，`delegate --target <agent> --instruction '<task>'`，**单引号**，不能有管道、反引号、`&&`，不能有其他 `--参数` |
-| 只能用 7 个公开 agent | DELEGATE_TARGET_UNKNOWN | file-agent、document-agent、knowledge-agent、photo-agent、media-agent、security-monitor-agent |
+| 只能用 6 个公开 agent | DELEGATE_TARGET_UNKNOWN | file-agent、document-agent、knowledge-agent、photo-agent、media-agent、security-monitor-agent |
 | 正文必须出现全部 5 个状态词 | DELEGATION_RESULT_HANDLING_MISSING | `completed`、`failed`、`cancelled`、`waiting_user`、`waiting_approval` |
 | 不能直接调用 `cli.invoke` | RUNTIME_DIRECT_CLI_INVOKE | 只能写"禁止 cli.invoke"这类否定句 |
 | 安全扫描 | SECURITY_* | 不能有：凭据赋值、curl/wget、bash/python 代码块、`cp `/`mv `/`rm `/`cat ` 这类命令词、`/volume1`/`/mnt`/`/share` 这类 NAS 绝对路径、"bypass/skip … approval" 这类字样，也不能出现 `request-id` 这类内部标识 |

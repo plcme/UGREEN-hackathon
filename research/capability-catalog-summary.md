@@ -3,7 +3,7 @@
 > 原始 kit 未提交进仓库（受 SkillHub 协议约束），这里只是我们自己的摘要。精确参数以原 JSON 为准。
 > approval：`none` 无需确认；`gateway`/`workflow`/`conditional` 需要用户确认（由平台子工作流执行）。
 
-Skill 只能写 `delegate --target <agent> --instruction '<task>'`，一共 **7 个 agent / 9 个 CLI**：
+Skill 只能写 `delegate --target <agent> --instruction '<task>'`，一共 **6 个 agent / 9 个 CLI**：
 
 | Agent | CLI | 读（无需确认） | 写（需确认） |
 |---|---|---|---|
