@@ -30,7 +30,8 @@
 ### ⚠️ 官方模板和检查器对不上的两处（踩坑点）
 - 模板写的是 `# Capability evidence` 加 `- <cli> -> <agent>`，**检查器只认** `# Generation-time capability evidence` 加 ``- `cli` → `agent` ``。
 - 模板写的是 `# Expert orchestration`，**检查器的必需标题只认** `# Workflow` / `# Orchestration` / `# 专家编排`。
-→ 两者都照检查器写：用 `# Workflow` 作为主标题，必要时在下面用二级标题 `## Expert orchestration`。
+- Starter Kit 说包里"推荐"放 `README.md`，但检查器把根目录的 README.md 判为 RESOURCE_UNSUPPORTED（error，状态 not-uploadable）。**包里不能放 README.md**；说明文档放在包外。
+→ 前两处都照检查器写：用 `# Workflow` 作为主标题，必要时在下面用二级标题 `## Expert orchestration`。
 
 ## 2. 警告级（不阻断，但评审和 AI 审阅会注意到）
 
@@ -83,5 +84,5 @@
 | AI NAS Fit | 真正用到本地数据、存储、算力、隐私 | 本地 OCR、文档抽取、本地模型；文件不出 NAS；建好文件夹引导用户补齐 |
 
 ## 6. 需要额外确认的
-- 本机未运行 kit 自带的检查器（运行外部下载的代码需要授权）；上述规则来自直接阅读检查器源码。正式提交前需要实际跑一遍 `node scripts/check-skill.mjs <skill-dir>`。
+- 已实际运行 kit 检查器验证上述规则（2026-11-04）。
 - 清单内容依据：FEMA / Operation HOPE《Emergency Financial First Aid Kit》的四大类（Household Identification、Financial and Legal Documentation、Medical Information、Household Contacts）——需要做成国家无关、可由用户调整的版本。
