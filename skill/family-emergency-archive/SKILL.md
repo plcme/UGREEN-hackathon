@@ -25,6 +25,8 @@ Collect these before Step 2. Ask only for what is missing, in one short message,
 4. **Checklist**: the default list in [references/document-checklist.md](references/document-checklist.md). Show the category names and let the user remove items that do not apply or add their own.
 5. **Expiry window**: default 90 days; passports use 6 months because many countries require six months of validity for entry.
 6. **Today's date**: use the current date known to the assistant. If it is not available, ask the user.
+7. **Country of residence**: ask the user; use it only to name local equivalents of checklist items (for example the national health card). Never guess it.
+8. **Situation (optional)**: if the user describes an event such as a hospital stay, a move or travel, offer the matching pack in [references/situation-packs.md](references/situation-packs.md) instead of the full checklist.
 
 The archive destination folder is needed only if the user later chooses a write action in Step 7; ask for it then.
 
@@ -47,7 +49,7 @@ Emergency archive progress:
 - [ ] Step 2: Find candidate documents
 - [ ] Step 3: Identify and read documents
 - [ ] Step 4: Check photographed documents (if included)
-- [ ] Step 5: Second search for missing items
+- [ ] Step 5: Add related documents and search again for missing items
 - [ ] Step 6: Build and confirm the readiness report
 - [ ] Step 7: Optional archive actions (only those the user chooses)
 ```
@@ -93,9 +95,17 @@ delegate --target photo-agent --instruction 'Within the user-confirmed folders o
 
 If no photo matches, record "no photographed documents found" and continue with Step 5. If this step fails, mark photo coverage as Not checked and continue.
 
-## Step 5: Second search for missing items
+## Step 5: Add related documents and search again for missing items
 
-Match the results of Steps 3 and 4 against the confirmed checklist for each member. For every item still unmatched, run one semantic search so that a file with an unusual name is not reported as missing:
+First apply [references/related-documents.md](references/related-documents.md): documents already found imply other documents (for example a lease implies dated condition photos of the property). Add those items with their reason.
+
+For every lease found, check that dated condition photos exist, using the lease start and end dates from Step 3:
+
+```text
+delegate --target photo-agent --instruction 'Within the user-confirmed folders only, find photos taken from 14 days before to 14 days after each of these lease dates: the lease start and end dates extracted from the found leases. For each date return the number of photos, the folders or albums they are in, and up to 5 example file paths. Read only: do not judge the condition of the property, and do not edit, move, tag or add photos to albums.'
+```
+
+Then match all results against the checklist for each member. For every item still unmatched, run one semantic search on document contents so that a file with an unusual name is not reported as missing:
 
 ```text
 delegate --target document-agent --instruction 'Within the user-confirmed search folders only, use semantic lookup to find documents that are any of the following items: the unmatched checklist items with the member each one belongs to. For each item return the best matching file path, holder name, expiry date if present, and a one-line evidence quote, or state that no match was found. Return at most 3 candidates per item. Read only: do not modify any file.'

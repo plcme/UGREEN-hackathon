@@ -13,6 +13,8 @@ Use this exact layout in Step 6 and for the saved index in Step 7c. Keep wording
 | Missing | Steps 3–5 finished for this item and nothing matched. |
 | Not checked | A needed step failed or was cancelled, or the file was unreadable. |
 
+Items added by a related-document rule show the reason in brackets.
+
 Order inside each member: Expired, Expiring soon, Missing, Needs review, Not checked, Found.
 
 ## Layout
@@ -39,6 +41,7 @@ Expiry window: 90 days (passports 6 months)
 | Passport | Expiring soon | YYYY-MM-DD | [file path], no. ••••1234 |
 | Will | Missing | — | — |
 | Health insurance policy | Found | YYYY-MM-DD | [file path] |
+| Condition photos (because a lease was found) | Missing | — | No photos within 14 days of lease start YYYY-MM-DD |
 
 ## Household
 | Item | Status | Expiry | Evidence |
