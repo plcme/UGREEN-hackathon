@@ -5,7 +5,7 @@
  ],
  [
   "Who is your target user, and what is their problem?",
-  "The person who manages a household's paperwork. In an emergency (a hospital stay, an insurance claim, a lost passport, a death in the family) they must find documents fast across scans, phone photos and old folders, and often learn too late that one is missing or expired."
+  "The person who manages a household's paperwork. In an emergency (a hospital stay, an insurance claim, a lost passport) they must find documents fast across scans, phone photos and old folders, and often learn too late that one is missing or expired."
  ],
  [
   "What is your solution?",
@@ -29,7 +29,7 @@
  ],
  [
   "What have you built so far? What is not built yet? What still needs testing on a NAS?",
-  "Built: the complete Skill package (workflow, checklist, related-document rules, situation packs, report template, disclosures), passing the uliya-skill-kit 0.7.3 static check with zero errors and warnings, plus test cases. Needs NAS testing: extraction and OCR accuracy, semantic lookup recall, and the approval flow."
+  "Built: the complete Skill package, passing the uliya-skill-kit 0.7.3 static check with zero errors and warnings, plus test cases. Needs NAS testing: extraction and OCR accuracy, semantic lookup recall, and the approval flow."
  ],
  [
   "How will you test your Skill if you become a Finalist? Name two core test cases and one edge case.",
