@@ -25,8 +25,8 @@ All files in this package (the workflow, checklist, status rules, report templat
 
 | Tool | Principal use |
 |---|---|
-| Claude Code (Anthropic) | Research on the capability catalog and Skill best practices; drafting the Skill files under the team's direction; running the kit's static checker |
+| Claude Code (Anthropic) | Research on the capability catalog and Skill best practices; drafting the Skill files and the proposal answers under the entrant's direction; running the kit's static checker |
 | Gemini (Google) | Idea brainstorming |
 | Cursor agent (Grok) | Compiling the official hackathon rules and dates into notes |
 
-The project idea, target user and product decisions were made by the team.
+The project idea, target user, checklist scope and product decisions were made by the entrant, Tianyi Tong (Coda).

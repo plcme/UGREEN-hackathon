@@ -4,7 +4,7 @@ Upload these two files on the Devpost "Enter a Submission" page (deadline: Nov 1
 
 | File | What it is | Status |
 |---|---|---|
-| `proposal.pdf` | Project Proposal (10 answers, 484/500 words, under 1 MB) | Draft: add team names and Representative, rewrite in the team's own words |
+| `proposal.pdf` | Project Proposal (10 answers, 484/500 words, under 1 MB) | Ready (optionally rewrite answers in your own words) |
 | `family-emergency-archive.zip` | Pre-test Skill Package | Ready: passes uliya-skill-kit 0.7.3 static check (0 errors, 0 warnings) |
 
 Also fill in the required fields on the Devpost submission page (project name, description, track: Automate Your Workflow).
