@@ -7,7 +7,7 @@ FLOW = '''<div class="flow">
 <div>1 Confirm members &amp; folders</div><div>2 Find files</div><div>3 Read &amp; OCR</div><div>4 Rules &amp; re-search</div><div>5 Confirm report</div><div>6 Approved actions</div></div>'''
 parts = []
 for i, (q, x) in enumerate(a, 1):
-    parts.append(f'<section><h3><span class="n">{i}</span>{e(q)}</h3><p>{e(x)}</p>{FLOW if i == 4 else ""}</section>')
+    parts.append(f'<section><h3><span class="n">{i}</span>{e(q)}</h3><p>{e(x)}</p></section>')
 doc = f'''<!doctype html><html><head><meta charset="utf-8"><title>Family Emergency Archive - Project Proposal</title>
 <style>
 @page {{ size: A4; margin: 16mm 16mm 14mm; }}
@@ -31,17 +31,14 @@ th {{ background: #f2f2f2; }}
 .todo {{ background: #fff3c4; }}
 </style></head><body>
 <header><h1>Family Emergency Archive</h1>
-<div class="sub">Know which family documents are on your NAS, and which ones are missing, before you need them.</div>
 <div class="meta"><b>Track</b><span>Automate Your Workflow</span>
-<b>Skill package</b><span>family-emergency-archive.zip (SKILL.md + 5 reference files)</span>
-<b>Team</b><span class="todo">TEAM MEMBER NAMES AND REPRESENTATIVE TO BE ADDED</span></div></header>
+<b>Entrant</b><span>Tianyi Tong (Coda)</span></div></header>
 {"".join(parts)}
 <div class="disc"><h2>Third-party components, external services and data flows</h2>
 <table><tr><th>Component</th><th>Source</th><th>License</th><th>Use</th></tr>
 <tr><td>Checklist section structure</td><td>Emergency Financial First Aid Kit, FEMA and Operation HOPE (ready.gov)</td><td>U.S. government public information</td><td>Inspiration for categories only; items rewritten and made country-neutral</td></tr>
 <tr><td>uliya-skill-kit 0.7.3</td><td>UGREEN Hackathon Starter Kit</td><td>UGREEN SkillHub User Agreement</td><td>Format rules and static checker; not included in the package</td></tr></table>
 External services: none. Data flow: all reading, extraction and OCR run through registered NAS experts on the user's NAS; nothing leaves the device. No open source libraries, scripts or binaries are included.
-<h2 style="margin-top:6px">AI tools used</h2>
-Claude Code (Anthropic): research, drafting Skill files and this proposal under the team's direction, running the static checker. Gemini (Google): brainstorming. Cursor agent (Grok): compiling official rules into notes.</div>
+</div>
 </body></html>'''
 open(out_html, "w").write(doc)
