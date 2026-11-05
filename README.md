@@ -1,8 +1,15 @@
 # UGREEN Hackathon 2026 on AI NAS: Bring Your Skills to UGOS
 
-This repository (UGREEN-hackathon) holds only the information that the organizers published for this hackathon. It contains no ideas and no solution content.
+Our entry: **family-emergency-archive**, a Skill that checks whether a family's essential documents are on the NAS, what is missing or expiring, and helps fill the gaps.
 
-These files were added by a Cursor cloud agent (Grok 4.7) on 2026-11-04, compiled from the official pages.
+| Path | Contents |
+|---|---|
+| [skill/family-emergency-archive/](skill/family-emergency-archive/) | The Skill package (SKILL.md + references). Zip this folder for submission. |
+| [skill-dev/](skill-dev/) | Test cases and development notes (not part of the package) |
+| [research/](research/) | Research notes: approach, capability catalog summary, brainstorm, Skill best practices |
+| [organizer-info/](organizer-info/) | Official hackathon information |
+
+The organizer information below was compiled from the official pages by a Cursor cloud agent (Grok 4.7) on 2026-11-04.
 
 | File | Contents |
 |---|---|
