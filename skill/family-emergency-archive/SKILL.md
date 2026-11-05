@@ -25,7 +25,7 @@ Collect these before Step 2. Ask only for what is missing, in one short message,
 4. **Checklist**: the default list in [references/document-checklist.md](references/document-checklist.md). Show the category names and let the user remove items that do not apply or add their own.
 5. **Expiry window**: default 90 days; passports use 6 months because many countries require six months of validity for entry.
 6. **Today's date**: use the current date known to the assistant. If it is not available, ask the user.
-7. **Country of residence**: ask the user; use it only to name local equivalents of checklist items (for example the national health card). Never guess it.
+7. **Country of residence**: ask the user; use it only to name local equivalents of checklist items (for example the national health card). Never guess it. If the user is unsure, offer the optional photo location check in Step 1.
 8. **Situation (optional)**: if the user describes an event such as a hospital stay, a move or travel, offer the matching pack in [references/situation-packs.md](references/situation-packs.md) instead of the full checklist.
 
 The archive destination folder is needed only if the user later chooses a write action in Step 7; ask for it then.
@@ -45,7 +45,7 @@ Copy this checklist into the conversation and update it as each step finishes:
 
 ```text
 Emergency archive progress:
-- [ ] Step 1: Confirm search folders
+- [ ] Step 1: Confirm search folders (and photo locations, only if the user allows)
 - [ ] Step 2: Find candidate documents
 - [ ] Step 3: Identify and read documents
 - [ ] Step 4: Check photographed documents (if included)
@@ -68,6 +68,18 @@ delegate --target file-agent --instruction 'Return the home folder path of the c
 ```
 
 Show the returned path as the default search folder and collect the Required input. Continue only after the user confirms the folders.
+
+**Optional photo location check (off by default).** Offer it in one sentence: "I can look at the countries where your photos were taken to suggest your country of residence and recent trips. This reads photo location data only. Allow it?" Run it only after the user explicitly says yes; otherwise skip it and do not mention it again.
+
+```text
+delegate --target photo-agent --instruction 'Within the user-confirmed folders only, group photos by the country where they were taken, using location data at country level. Return for each country: photo count, earliest and latest photo date, and the photo count in the last 12 months. Return country names and counts only; do not return addresses, coordinates, file paths or people. Read only: do not edit, move, tag or add photos to albums.'
+```
+
+Use the result only as suggestions that the user must confirm:
+
+- The country with most photos over time is suggested as the country of residence.
+- Countries with photos in the last 12 months, other than the country of residence, are suggested as recent trips. If the user confirms travel, add the travel items from [references/situation-packs.md](references/situation-packs.md) (passport validity, visas, travel insurance) to the checklist.
+- If no photo has location data, say so and ask the user directly.
 
 ## Step 2: Find candidate documents
 
@@ -171,6 +183,7 @@ Finish with a short summary: counts per status, the three most urgent items (exp
 # Privacy and disclosures
 
 - Reads document text and, when the user includes photos, recognized text in photos, because emergency records are often scanned or photographed paper. Only user-confirmed folders are read.
+- Reads photo location data at country level only if the user explicitly allows the optional check in Step 1, to suggest the country of residence and recent trips. Addresses, coordinates and people are never returned or saved.
 - All processing uses NAS capabilities; no data is sent to external services by this Skill.
 - Full identity numbers are never shown or saved; only the last 4 characters.
 - Third-party components, AI tools used, and work developed for this Hackathon are listed in [references/disclosures.md](references/disclosures.md).

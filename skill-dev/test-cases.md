@@ -38,6 +38,11 @@ Household: Sam (adult), Alex (adult), Mia (child, 8).
   - Folders created only for Missing items (for example `Archive/Sam/Legal`, `Archive/Alex/Legal`); found files tagged `emergency-archive`; a new dated index note saved and verified.
   - **Repeat run** the same day: existing folders and tags are reported as skipped, a second index is saved without overwriting the first, and the report is unchanged.
 
+## Extra check: photo location opt-in
+
+- **Input**: user is unsure of the country to use and allows the photo location check. Synthetic photos: most taken in Australia; 30 photos in Japan within the last 12 months.
+- **Expected**: suggests Australia as the country of residence and Japan as a recent trip, asks the user to confirm both, then adds passport, visa and travel insurance items. Returns country names and counts only. If the user says no, the check is never run.
+
 ## Edge case: nothing to find, then a failure
 
 - **Input A**: confirmed folder contains no documents or images.
