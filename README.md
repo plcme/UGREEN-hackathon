@@ -4,6 +4,7 @@ Our entry: **family-emergency-archive**, a Skill that checks whether a family's 
 
 | Path | Contents |
 |---|---|
+| [deliverable/](deliverable/) | **Files to submit**: proposal.pdf and family-emergency-archive.zip |
 | [skill/family-emergency-archive/](skill/family-emergency-archive/) | The Skill package (SKILL.md + references). Zip this folder for submission. |
 | [skill-dev/](skill-dev/) | Test cases and development notes (not part of the package) |
 | [research/](research/) | Research notes: approach, capability catalog summary, brainstorm, Skill best practices |
