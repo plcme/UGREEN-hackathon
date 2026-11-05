@@ -26,7 +26,7 @@ If any document in a group is found, every other document in the same group is e
 | If this is found or confirmed | Then also expect | Applies to |
 |---|---|---|
 | User is a landlord (rental lease where the user is the lessor) | Landlord insurance; bond or deposit record; condition report and dated condition photos for each tenancy | per rental property |
-| Any child in the household | Birth certificate; vaccination record; allergy record; guardianship nomination | each child; household |
+| Any child in the household (a member under 18 by the birth year found, or named as a child by the user) | Birth certificate; vaccination record; allergy record; guardianship nomination | each child; household |
 | Life insurance policy | Beneficiary nomination; will | the policy holder |
 | Pension or retirement account | Beneficiary nomination | the account holder |
 | Loan or mortgage contract | Latest loan statement | household |
@@ -43,7 +43,7 @@ Jobs that usually need them include: doctor, nurse, pharmacist, dentist, lawyer,
 
 ## Close to retirement
 
-Ask for each adult's birth year in Required input. If an adult is within 5 years of the retirement age the user confirms for their country (use 60 as the starting suggestion when the user does not know), add these items for that member: pension or retirement account statements; social insurance contribution history; proof of employment history; identity documents; bank account details for pension payments (no full account numbers). Show the reason, for example "Retirement documents (because Alex will reach retirement age in 3 years)".
+Do not ask the user for ages. Use the birth year found in a member's identity documents in Step 3; if none was found, skip this rule for that member. If the member is within 5 years of the usual retirement age in the confirmed country of residence (use 60 when that age is not known, and say so in the report), add these items for that member: pension or retirement account statements; social insurance contribution history; proof of employment history; identity documents; bank account details for pension payments (no full account numbers). Show the reason, for example "Retirement documents (because Alex will reach retirement age in 3 years)".
 
 ## Condition photos check
 

@@ -21,7 +21,7 @@ Folder `EmergencyTest/` on the NAS:
 | `work/contract_sam.pdf` | Employment contract, job title Registered Nurse; no degree certificate anywhere | Degree certificate marked important and listed first |
 | `car/purchase_invoice.pdf` | Car purchase invoice; registration present, no vehicle insurance or warranty | Vehicle group: insurance and warranty become Missing |
 
-Household: Sam (adult, born 1984), Alex (adult, born 1967), Mia (child, born 2018). Retirement age confirmed as 65.
+Household: Sam (adult, born 1984), Alex (adult, born 1967), Mia (child, born 2018). Birth years come from the synthetic ID scans; retirement age for the test country is 65.
 
 ## Core case 1: first full check
 

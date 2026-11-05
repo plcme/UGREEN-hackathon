@@ -1,0 +1,42 @@
+[
+ [
+  "What does your Skill do? (one sentence)",
+  "Family Emergency Archive checks whether every essential family document is stored on the NAS, flags what is missing, expired or expiring, and prepares folders to fill the gaps."
+ ],
+ [
+  "Who is your target user, and what is their problem?",
+  "The person who manages a household's paperwork. In an emergency (a hospital stay, an insurance claim, a lost passport, a death in the family) they must find documents fast across scans, phone photos and old folders, and often learn too late that one is missing or expired."
+ ],
+ [
+  "What is your solution?",
+  "The Skill checks each family member against an essential-document checklist and marks every item Found, Missing, Expired, Expiring soon, Needs review or Not checked, citing the real file path. Related-document rules infer what else should exist. After confirmation, it can create gap folders, tag documents and save a dated index."
+ ],
+ [
+  "What is the main user flow?",
+  "Name family members and folders. Find documents and images. Read documents and recognize text in photographed papers. Apply related-document rules and search contents again. Review and confirm the report. Optionally create gap folders, tag documents and save the index, each after approval."
+ ],
+ [
+  "How is your idea different from existing tools or common AI solutions?",
+  "Search tools, photo apps and document managers find files you already know about. This Skill answers the opposite question: what is missing or about to expire. It reasons across documents: a lease implies move-in condition photos, a car invoice implies insurance and warranty, a nursing contract makes a missing degree urgent."
+ ],
+ [
+  "Which UGREEN AI NAS features does your Skill use, and at which step?",
+  "Files (ug-filesystem, file-workflow): home folder, document search, gap folders. Documents (ug-document): extraction and semantic lookup inside contents. Albums (ug-photo): text search in photos, OCR, date search for condition photos, optional country-level locations. File tags (ug-filemgr): tagging. Knowledge (ug-knowledge): saving the index."
+ ],
+ [
+  "What is your technical approach?",
+  "Sequential orchestration with approval gates across file-agent, document-agent, photo-agent and knowledge-agent; each step uses only real upstream results. Read-only until the user picks a write action; every write needs platform approval. Reruns skip existing folders and tags and never overwrite indexes. All five delegation states are handled; unreadable files become Not checked, never Missing. Local NAS AI only; no external services. Identity numbers are masked; photo locations need explicit consent."
+ ],
+ [
+  "What have you built so far? What is not built yet? What still needs testing on a NAS?",
+  "Built: the complete Skill package (workflow, checklist, related-document rules, situation packs, report template, disclosures), passing the uliya-skill-kit 0.7.3 static check with zero errors and warnings, plus test cases. Needs NAS testing: extraction and OCR accuracy, semantic lookup recall, and the approval flow."
+ ],
+ [
+  "How will you test your Skill if you become a Finalist? Name two core test cases and one edge case.",
+  "Core 1: first check of a synthetic three-person family; expect an expired ID, a passport within six months of expiry, missing wills, an oddly named policy found by content search, and missing lease condition photos. Core 2: create folders, tag, save the index, then rerun; expect skips and a new index. Edge: an empty folder stops cleanly."
+ ],
+ [
+  "What are the known limits, risks, or outside dependencies of your Skill?",
+  "OCR may misread dates on poor photos; such items become Needs review. Requirements vary by country, so the checklist is editable. One run checks up to 500 files. Without scheduling there are no automatic reminders. Accuracy depends on the NAS local models."
+ ]
+]
