@@ -17,7 +17,7 @@
  ],
  [
   "How is your idea different from existing tools or common AI solutions?",
-  "Search tools, photo apps and document managers find files you already know about. This Skill answers the opposite question: what is missing or about to expire. It reasons across documents: a lease implies move-in condition photos, a car invoice implies insurance and warranty, a nursing contract makes a missing degree urgent."
+  "Search tools, photo apps and document managers find files you already know about. This Skill answers the opposite question: what is missing or about to expire. It reasons across documents: a lease implies move-in condition photos, a car invoice implies insurance and warranty, a nursing contract makes a missing degree urgent. For UGREEN, it makes the NAS the family's trusted home for its most important records: every gap it reveals is a reason to store more there, and nothing leaves home."
  ],
  [
   "Which UGREEN AI NAS features does your Skill use, and at which step?",
@@ -25,7 +25,7 @@
  ],
  [
   "What is your technical approach?",
-  "Sequential orchestration with approval gates across file-agent, document-agent, photo-agent and knowledge-agent; each step uses only real upstream results. Read-only until the user picks a write action; every write needs platform approval. Reruns skip existing folders and tags and never overwrite indexes. All five delegation states are handled; unreadable files become Not checked, never Missing. Local NAS AI only; no external services. Identity numbers are masked; photo locations need explicit consent."
+  "Sequential orchestration with approval gates across four NAS experts; each step uses only real upstream results. Read-only until the user picks a write action; every write needs platform approval. Reruns skip existing folders and tags and never overwrite indexes. All five delegation states are handled; unreadable files become Not checked, never Missing. Local NAS AI only; no external services. Identity numbers are masked; photo locations need explicit consent."
  ],
  [
   "What have you built so far? What is not built yet? What still needs testing on a NAS?",
