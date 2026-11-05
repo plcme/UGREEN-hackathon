@@ -18,7 +18,10 @@ Folder `EmergencyTest/` on the NAS:
 | `medical/checkup_mia_2025.pdf` | Child check-up report | Medical item Found, no interpretation |
 | (none) | No will for either adult | Missing |
 
-Household: Sam (adult), Alex (adult), Mia (child, 8).
+| `work/contract_sam.pdf` | Employment contract, job title Registered Nurse; no degree certificate anywhere | Degree certificate marked important and listed first |
+| `car/purchase_invoice.pdf` | Car purchase invoice; registration present, no vehicle insurance or warranty | Vehicle group: insurance and warranty become Missing |
+
+Household: Sam (adult, born 1984), Alex (adult, born 1967), Mia (child, born 2018). Retirement age confirmed as 65.
 
 ## Core case 1: first full check
 
@@ -27,6 +30,9 @@ Household: Sam (adult), Alex (adult), Mia (child, 8).
   - Asks only for the missing inputs, then confirms folders before searching.
   - Report lists Alex ID card Expired, Sam passport Expiring soon, both wills Missing, home insurance Found, life insurance Found with `scan_0042.pdf` as evidence, Alex health insurance Found from the photo, `broken.pdf` under Not checked.
   - "Condition photos (because a lease was found)" appears as Missing.
+  - Sam: degree certificate and nursing registration listed first as important Missing items.
+  - Alex: retirement documents added (within 5 years of 65).
+  - Vehicle insurance and vehicle warranty Missing with reason "because a vehicle purchase invoice was found".
   - Only last 4 digits of numbers are shown (••••4821).
   - No file is changed before Step 7.
 

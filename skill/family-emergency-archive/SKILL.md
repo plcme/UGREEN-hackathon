@@ -19,7 +19,7 @@ Scope and limits:
 
 Collect these before Step 2. Ask only for what is missing, in one short message, and wait (`waiting_user`).
 
-1. **Household members**: names or roles (for example "me, my wife Anna, son Leo (8)"). Adults and children get different checklist items.
+1. **Household members**: names or roles and birth year (for example "me (1975), my wife Anna (1978), son Leo (2018)"). Adults and children get different checklist items, and adults close to retirement get retirement documents. If the user prefers not to give birth years, skip the age-based rules.
 2. **Search folders**: the NAS folders to check. Offer the user's home folder from Step 1 as the default; the user may add or remove folders. Never search outside the confirmed folders.
 3. **Include photos**: yes or no. If yes, photographed paper documents in the photo library are also checked.
 4. **Checklist**: the default list in [references/document-checklist.md](references/document-checklist.md). Show the category names and let the user remove items that do not apply or add their own.
@@ -94,7 +94,7 @@ If the result is empty, tell the user that no documents or images were found in 
 Send the document files from Step 2 (PDF and office documents) in batches of up to 100 files.
 
 ```text
-delegate --target document-agent --instruction 'Read only the files listed in this request. For each file, identify the document type using these categories: identity, insurance, property and finance, legal, medical, emergency contacts, other. Extract: document type (for example passport, life insurance policy, will), holder name, issuer, document number showing only the last 4 characters, issue date, expiry or renewal date, and the page used as evidence. For medical reports return only report date, facility and report type; do not interpret results. Mark any field you cannot read as unknown and list unreadable files separately with the reason. Do not modify any file.'
+delegate --target document-agent --instruction 'Read only the files listed in this request. For each file, identify the document type using these categories: identity, education and work, social insurance and retirement, banking and tax, insurance, home and utilities, vehicles, major purchases and contracts, legal, medical, emergency contacts, other. Extract: document type (for example passport, degree certificate, employment contract, vehicle purchase invoice, will), holder name, issuer, document number showing only the last 4 characters, issue date, expiry, renewal or warranty end date, and the page used as evidence. Also extract: job title from employment contracts and resumes; the item and its vehicle or property from purchase invoices, registrations and warranties; lease start and end dates and whether the user is tenant or landlord. For medical reports return only report date, facility and report type; do not interpret results. Mark any field you cannot read as unknown and list unreadable files separately with the reason. Do not modify any file.'
 ```
 
 Keep the list of unreadable files; their checklist items become **Not checked**, never Missing.
