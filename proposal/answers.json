@@ -37,6 +37,6 @@
  ],
  [
   "What are the known limits, risks, or outside dependencies of your Skill?",
-  "OCR may misread dates on poor photos; such items become Needs review. Requirements vary by country, so the checklist is editable. One run checks up to 500 files. Without scheduling there are no automatic reminders. Accuracy depends on the NAS local models."
+  "Handwritten or partly hidden dates are flagged for the user to confirm, never guessed. Requirements vary by country, so the checklist is editable. One run checks up to 500 files. Skills stop when the call ends, so users rerun the check themselves; every run keeps a dated index."
  ]
 ]
