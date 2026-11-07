@@ -8,7 +8,7 @@ FLOW = '''<div class="flow">
 parts = []
 for i, (q, x) in enumerate(a, 1):
     parts.append(f'<section><h3><span class="n">{i}</span>{e(q)}</h3><p>{e(x)}</p></section>')
-doc = f'''<!doctype html><html><head><meta charset="utf-8"><title>Family Emergency Archive - Project Proposal</title>
+doc = f'''<!doctype html><html><head><meta charset="utf-8"><title>Paper Nag - Project Proposal</title>
 <style>
 @page {{ size: A4; margin: 16mm 16mm 14mm; }}
 body {{ font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; line-height: 1.42; color: #1d1d1f; }}
@@ -30,7 +30,7 @@ td, th {{ border: 1px solid #ccc; padding: 2px 5px; text-align: left; vertical-a
 th {{ background: #f2f2f2; }}
 .todo {{ background: #fff3c4; }}
 </style></head><body>
-<header><h1>Family Emergency Archive</h1>
+<header><h1>Paper Nag</h1>
 <div class="meta"><b>Track</b><span>Automate Your Workflow</span>
 <b>Entrant</b><span>Tianyi Tong (Coda)</span></div></header>
 {"".join(parts)}

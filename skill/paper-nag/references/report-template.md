@@ -20,7 +20,7 @@ Order inside each member: Expired, Expiring soon, Missing, Needs review, Not che
 ## Layout
 
 ```markdown
-# Family Emergency Archive — readiness report (YYYY-MM-DD)
+# Paper Nag — readiness report (YYYY-MM-DD)
 
 Checked folders: [list]
 Photos included: yes/no
