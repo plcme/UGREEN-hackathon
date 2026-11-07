@@ -1,42 +1,42 @@
 [
  [
   "What does your Skill do? (one sentence)",
-  "Family Emergency Archive checks whether every essential family document is stored on the NAS, flags what is missing, expired or expiring, and prepares folders to fill the gaps."
+  "Family Emergency Archive is a nudging assistant: it works out which family documents should be on your NAS and chases you to store the missing ones, without sensitive data leaving home."
  ],
  [
   "Who is your target user, and what is their problem?",
-  "The person who manages a household's paperwork. In an emergency (a hospital stay, an insurance claim, a lost passport) they must find documents fast across scans, phone photos and old folders, and often learn too late that one is missing or expired."
+  "Every household has one person who keeps the paperwork, often the same parent who set up the NAS. Their problem shows up in an emergency, such as a hospital stay or an insurance claim, when a key document turns out to be missing or expired. The Skill also encourages whoever runs the NAS to become that person."
  ],
  [
   "What is your solution?",
-  "The Skill checks each family member against an essential-document checklist and marks every item Found, Missing, Expired, Expiring soon, Needs review or Not checked, citing the real file path. Related-document rules infer what else should exist. After confirmation, it can create gap folders, tag documents and save a dated index."
+  "The Skill reads what you have already stored and works out what it implies. A car insurance policy means the purchase invoice should be kept too; new furniture means a receipt and warranty. It reports each item as found, missing, expired or expiring, with file paths, and offers to prepare folders for the gaps."
  ],
  [
   "What is the main user flow?",
-  "Name family members and folders. Find documents and images. Read documents and recognize text in photographed papers. Apply related-document rules and search contents again. Review and confirm the report. Optionally create gap folders, tag documents and save the index, each after approval."
+  "Tell the Skill who is in the family and where files live. It searches documents and photos, reads text in scanned papers, and applies related-document rules. You review a plain report of what is missing or expiring. If you agree, it creates gap folders, tags files and saves a dated index."
  ],
  [
   "How is your idea different from existing tools or common AI solutions?",
-  "Search tools, photo apps and document managers find files you already know about. This Skill answers the opposite question: what is missing or about to expire. It reasons across documents: a lease implies move-in condition photos, a car invoice implies insurance and warranty, a nursing contract makes a missing degree urgent. For UGREEN, it makes the NAS the family's trusted home for its most important records: every gap it reveals is a reason to store more there, and nothing leaves home."
+  "Most tools are passive: they only handle what you give them. Cloud vaults such as Trustworthy add expiry reminders, but your records live on their servers. This Skill asks the opposite question, what is missing, and reasons across documents: a claim usually needs several papers, so it checks the whole set before you need it, all on the family's own NAS."
  ],
  [
   "Which UGREEN AI NAS features does your Skill use, and at which step?",
-  "Files (ug-filesystem, file-workflow): home folder, document search, gap folders. Documents (ug-document): extraction and semantic lookup inside contents. Albums (ug-photo): text search in photos, OCR, date search for condition photos, optional country-level locations. File tags (ug-filemgr): tagging. Knowledge (ug-knowledge): saving the index."
+  "Files (ug-filesystem, file-workflow): home folder, document search, gap folders. Documents (ug-document): extraction and semantic lookup inside contents. Albums (ug-photo): text search in photos, OCR, date search for condition photos. File tags (ug-filemgr): tagging. Knowledge (ug-knowledge): saving the index."
  ],
  [
   "What is your technical approach?",
-  "Sequential orchestration with approval gates across four NAS experts; each step uses only real upstream results. Read-only until the user picks a write action; every write needs platform approval. Reruns skip existing folders and tags and never overwrite indexes. All five delegation states are handled; unreadable files become Not checked, never Missing. Local NAS AI only; no external services. Identity numbers are masked; photo locations need explicit consent."
+  "The Skill calls four NAS experts in order, using only real results from each step. It stays read-only until the user picks an action, and every write needs platform approval. Reruns never duplicate folders or overwrite an index. Unreadable files are marked Not checked, never Missing. Only local NAS AI is used, and identity numbers are masked."
  ],
  [
   "What have you built so far? What is not built yet? What still needs testing on a NAS?",
-  "Built: the complete Skill package, passing the uliya-skill-kit 0.7.3 static check with zero errors and warnings, plus test cases. Needs NAS testing: extraction and OCR accuracy, semantic lookup recall, and the approval flow."
+  "Built: the full Skill package, which passes the uliya-skill-kit 0.7.3 static check with no errors or warnings. Still to test on a NAS: extraction and OCR quality on real scans, semantic search recall, and the approval flow."
  ],
  [
   "How will you test your Skill if you become a Finalist? Name two core test cases and one edge case.",
-  "Core 1: first check of a synthetic three-person family; expect an expired ID, a passport within six months of expiry, missing wills, an oddly named policy found by content search, and missing lease condition photos. Core 2: create folders, tag, save the index, then rerun; expect skips and a new index. Edge: an empty folder stops cleanly."
+  "Core 1: a first check of a made-up three-person family should find an expired ID, a passport within six months of expiry, missing wills, an oddly named policy found by content, and missing lease condition photos. Core 2: create folders, tag files and save the index, then rerun; existing items are skipped and a new index is saved. Edge: an empty folder ends cleanly."
  ],
  [
   "What are the known limits, risks, or outside dependencies of your Skill?",
-  "Handwritten or partly hidden dates are flagged for the user to confirm, never guessed. Requirements vary by country, so the checklist is editable. One run checks up to 500 files. Skills stop when the call ends, so users rerun the check themselves; every run keeps a dated index."
+  "Handwritten or blurry dates go to the user to confirm, never guessed. Document requirements differ by country, so the checklist needs a version for each country where UGREEN sells. One run checks up to 500 files. We would like to build these improvements together with UGREEN."
  ]
 ]
