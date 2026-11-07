@@ -1,5 +1,5 @@
 ---
-name: family-emergency-archive
+name: paper-nag
 description: Household emergency-document readiness check for UGREEN NAS. Shows, for each family member, which essential records (identity, insurance, property, legal, medical, emergency contacts) are already stored on the NAS, which are missing, which are expired or expiring soon, and prepares a local archive index with folders for the gaps. Use when the user asks whether the family's important documents are complete, wants an emergency binder or document checklist, asks what is missing or about to expire, or wants family records organized for an emergency.
 ---
 

@@ -1,7 +1,7 @@
 # Proposal answers v2 (co-written draft)
 
 ## 1. What does your Skill do? (one sentence)
-Family Emergency Archive is a nudging assistant, not a filing tool: it works out which family documents should be on your NAS, chases you to store the missing ones, without data leaving home.
+Paper Nag is a nudging assistant, not a filing tool: it works out which family documents should be on your NAS, chases you to store the missing ones, without data leaving home.
 
 ## 2. Who is your target user, and what is their problem?
 Every household has one person who keeps the paperwork, often the same parent who set up the NAS. In an emergency, a hospital stay, an insurance claim, a lost passport, is when they find a document is missing, expired, or buried in a phone photo.

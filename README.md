@@ -1,11 +1,11 @@
 # UGREEN Hackathon 2026 on AI NAS: Bring Your Skills to UGOS
 
-Our entry: **family-emergency-archive**, a Skill that checks whether a family's essential documents are on the NAS, what is missing or expiring, and helps fill the gaps.
+Our entry: **paper-nag**, a Skill that checks whether a family's essential documents are on the NAS, what is missing or expiring, and helps fill the gaps.
 
 | Path | Contents |
 |---|---|
-| [deliverable/](deliverable/) | **Files to submit**: proposal.pdf and family-emergency-archive.zip |
-| [skill/family-emergency-archive/](skill/family-emergency-archive/) | The Skill package (SKILL.md + references). Zip this folder for submission. |
+| [deliverable/](deliverable/) | **Files to submit**: proposal.pdf and paper-nag.zip |
+| [skill/paper-nag/](skill/paper-nag/) | The Skill package (SKILL.md + references). Zip this folder for submission. |
 | [skill-dev/](skill-dev/) | Test cases and development notes (not part of the package) |
 | [research/](research/) | Research notes: approach, capability catalog summary, brainstorm, Skill best practices |
 | [organizer-info/](organizer-info/) | Official hackathon information |

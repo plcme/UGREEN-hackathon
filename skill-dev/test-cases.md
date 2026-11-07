@@ -1,4 +1,4 @@
-# Test cases for family-emergency-archive
+# Test cases for paper-nag
 
 Not part of the Skill package. Used for PDF question 9 and for the Finalist NAS testing day. All test data must be synthetic (fake names, fake numbers, generated scans).
 
